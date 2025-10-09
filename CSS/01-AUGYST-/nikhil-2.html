@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            /* background-image: url('https://imgs.search.brave.com/zo9sIdwT7R6vVx0mNtrpEtCNzQ9J37QPGRUgg2_FC2Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzQ1L2Mw/Lzg2LzQ1YzA4Njk1/YWM3NDAwNDc2OTY1/MzY3YWFiYWJkZDNi/LmpwZw'); */
+            background-size: cover;
+        }
+
+        .main {
+            display: flex;
+            margin: 65px auto;
+            height: 80vh;
+            width: 60vw;
+            border-radius: 10px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        .photo {
+            height: 100%;
+            width: 50%;
+            background-image: url("https://imgs.search.brave.com/HFc9i10UrPr68RmLmk_NbXWeXdOKFWHwaIrsZWUFNGI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE2/MDM0NzYzOTczOTMt/NmRiOTM4ZDA1Nzhj/P2ZtPWpwZyZxPTYw/Jnc9MzAwMCZpeGxp/Yj1yYi00LjEuMCZp/eGlkPU0zd3hNakEz/ZkRCOE1IeHpaV0Z5/WTJoOE1UVjhmR052/Ykc5eVpuVnNKVEl3/WjJseWJIeGxibnd3/Zkh3d2ZIeDhNQT09");
+            background-size: cover;
+        }
+
+        .con {
+            border: 1px solid black;
+            padding: 40px;
+            width: 50%;
+            color: white;
+            background-color: black;
+        }
+
+        input {
+            background-color: black;
+            width: 200px;
+        }
+
+        section {
+            margin: 20px 0px;
+        }
+
+        button {
+            height: 35px;
+            width: 100px;
+            color: azure;
+            border: 1px solid gray;
+            border-radius: 20px;
+            background-color: rgb(20, 187, 20);
+            box-shadow: 0px 0px 5px 1px green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="photo"></div>
+        <div class="con">
+            <h2>Registration Info</h2>
+            <section>
+                <label for="">Name </label>
+                <br>
+                <input type="text" name="" id="">
+            </section>
+            <section><label for="">Birthdate</label>
+                <br>
+                <input type="date" name="" id="">
+            </section>
+            <section>
+                <label for="">Gender</label><br>
+                <input type="text" name="" id="">
+            </section>
+            <section>
+                <label for="">Email</label><br>
+                <input type="text" name="" id="">
+            </section>
+            <section>
+                <label for="">Phone</label><br>
+                <input type="text" name="" id="">
+            </section>
+
+            <button>Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            row-gap: 20px;
+
+            flex-direction: column;
+            /* margin: 200px; */
+        }
+
+        button {
+            height: 25px;
+            width: 50px;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        h1 {
+            padding: 10px 0px;
+        }
+
+        .container {
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: larger;
+            border: 2px solid black;
+        }
+        ol{
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <label for="user">Usename: </label>
+            <input type="text" name="username" id="user" class="username">
+
+            <br><br>
+            <label for="pass">Comment: </label>
+            <input type="text" name="comment" id="pass" class="comment">
+            <br><br>
+            <button>Post</button>
+        </form>
+
+    </div>
+    <ol>
+
+    </ol>
+
+
+    <script>
+        let form = document.querySelector('form');
+        let username = document.querySelector('.username');
+        let comment = document.querySelector('.comment');
+        let ol = document.querySelector('ol');
+
+        form.addEventListener('submit', (e) => {
+            
+            e.preventDefault();
+            let list = document.createElement('li');
+            if(username.value && comment.value){
+                list.textContent = `${username.value} - ${comment.value}`;
+                ol.appendChild(list);
+            }
+
+            username.value = '';
+            comment.value = '';
+
+        })
+
+
+    </script>
+</body>
+
+</html>

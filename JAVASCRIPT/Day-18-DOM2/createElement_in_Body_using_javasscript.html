@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let body = document.body;
+        // let demo = document.createElement('div');
+        // console.log(demo);
+        // demo.innerHTML = 'Hello';
+        // body.appendChild(demo);
+        
+
+        // let body = document.body;
+        // let para = document.createElement('p'); 
+        // para.innerHTML = 'Paragraph-1';
+        // body.appendChild(para);
+
+
+
+        // let body = document.body;
+        // let ol = document.createElement('ol');
+        // let li_1 = document.createElement('li');
+        // let li_2 = document.createElement('li');
+        // li_1.innerHTML = 'Coffee';
+        // li_2.innerHTML = 'Tea';
+        // ol.appendChild(li_1);
+        // ol.appendChild(li_2);
+        // body.appendChild(ol)
+
+        let images = ['https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/2325452/pexels-photo-2325452.jpeg',
+            'https://images.pexels.com/photos/26935603/pexels-photo-26935603.jpeg',
+            'https://images.pexels.com/photos/26935603/pexels-photo-26935603.jpeg',
+            'https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=600',
+            'https://images.pexels.com/photos/2325452/pexels-photo-2325452.jpeg',
+            'https://images.pexels.com/photos/26935603/pexels-photo-26935603.jpeg',
+            'https://images.pexels.com/photos/26935603/pexels-photo-26935603.jpeg',
+            'https://images.pexels.com/photos/26935603/pexels-photo-26935603.jpeg',
+        ]
+
+
+        // let body = document.body;
+        // for(let i = 0; i < images.length; i++){
+        //     let img = document.createElement('img');
+        //     img.src = images[i];
+            // img.height = '500'
+            // img.width = '500'
+            // // console.log(img);
+            // body.appendChild(img)
+        // }
+        // console.log(images);
+
+        let body = document.body;
+        images.forEach((el)=>{
+            let img = document.createElement('img');
+            img.src = el;
+            img.height = '200'
+            img.width = '400'
+            // console.log(img);
+            body.appendChild(img)
+        }) 
+        
+    </script>
+</body>
+</html>

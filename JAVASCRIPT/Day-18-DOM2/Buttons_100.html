@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let body = document.body;
+        let inp = parseInt(prompt('Enter the number of button you want to create: '));
+        for(let i = 1; i <= inp; i++){
+            body.innerHTML += `<button>Button${i}</button>`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        section {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+            border-radius: 60px;
+            background-color: aqua;
+            padding: 30px;
+            text-align: center;
+            margin: auto;
+        }
+        button{
+            display: block;
+            margin: auto;
+            margin-block-start: 5px;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: 22px;
+            border-radius: 20%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section >
+
+    </section>
+    <button onclick="randomEmoji()">Change Emoji</button>
+    
+    <script>
+
+        let section = document.querySelector('section');
+        section.innerHTML = '😂';
+        let emojis = [
+            "😀", "😁", "😂", "🤣", "😃", "😄", "😅", "😆", "😉", "😊",
+            "😋", "😎", "😍", "😘", "🥰", "😗", "😙", "😚", "🙂", "🤗",
+            "🤩", "🤔", "🤨", "😐", "😑", "😶", "🙄", "😏", "😣", "😥",
+            "😮", "🤐", "😯", "😪", "😫", "🥱", "😴", "😌", "😛", "😜",
+            "😝", "🤤", "😒", "😓", "😔", "😕", "🙃", "🤑", "😲", "☹️"
+        ];
+        let res = emojis.map((el)=>{
+            return el.fontsize(200);
+        })
+        console.log(res);
+        
+        let n = emojis.length;
+        function randomEmoji() {
+            let index = Math.floor(Math.random() * n);
+            // section.append(emojis[index]);
+            section.innerHTML = emojis[index];
+        }
+        
+
+    </script>
+</body>
+
+</html>

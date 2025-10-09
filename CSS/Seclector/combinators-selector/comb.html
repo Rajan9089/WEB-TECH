@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /*all p inside section */
+
+        /* section p {
+            background-color: green;
+        } */
+
+
+        section > p{
+            background-color: red;
+           
+        }
+        div > p {
+            background-color: blue;
+        }
+        
+        /* section > article > p {
+            background-color: aqua;
+        } */
+
+        article ~ p{
+            background-color: brown;
+        }
+
+        /* body>ul>li{
+            background-color: yellow;
+        } */
+
+
+    </style>
+</head>
+<body>
+
+    
+<!-- 
+    <div>
+        <p>para 1</p>
+        <article>
+            <aside>
+                <p>para 3</p>
+            </aside>
+            <p>para 2</p>
+        </article>
+
+
+        <p>para new 1</p>
+        <p> para new 2</p>
+        <p>para new 3</p>
+    </div> -->
+
+
+    <section>
+        <p>para 1</p>
+        <article>
+            <aside>
+                <p>para 3</p>
+            </aside>
+            <p>para 2</p>
+        </article>
+        <!-- <a href="">Amazon</a>
+
+        <p>para new 1</p>
+        <p> para new 2</p>
+        <p>para new 3</p> -->
+    </section>
+</body>
+</html>

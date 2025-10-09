@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 200px;
+        }
+        button {
+            font-size: large;
+        }
+        h1 {
+            padding: 10px 0px;
+        }
+        .container{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: larger;
+            border: 2px solid black;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+        <label for="user">Usename: </label>
+        <input type="text" name="username" id="user" class="username">
+
+        <br><br>
+        <label for="pass">Password: </label>
+        <input type="text" name="password" id="pass" class="password">
+        <br><br>
+        <button>Submit</button>
+    </form>
+    </div>
+    <h1 class="h1"></h1>
+
+    <script>
+        let form = document.querySelector('form');
+        let username = document.querySelector('.username');
+        let password = document.querySelector('.password');
+        let h1 = document.querySelector('.h1');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (username.value == 'admin' && password.value == 'admin@123') {
+                h1.textContent = `Welcome, ${username.value}`;
+                alert('Login Successfull.')
+            }
+            else {
+                alert('Invalid Credential.')
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

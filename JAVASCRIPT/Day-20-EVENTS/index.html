@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 500px;
+            width: 500px;
+            border: 2px solid black;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="func()" ondblclick="">Demo</button>
+
+    <div onmouseenter="funct2()" onmousemove="MouseMove()">
+
+    </div>
+
+    <script>
+        let div = document.querySelector('div');
+        function funct2(){
+            console.log(`Mouse entered to div`);
+        }
+        function MouseMove(){
+            console.log("Mouse Moved");
+            
+        }
+        function func(){
+            div.style.backgroundColor = 'yellow';
+        }
+    </script>
+    
+</body>
+</html>

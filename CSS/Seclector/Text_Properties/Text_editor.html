@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <style>
+
+        /* colour */
+        #red:checked~p {
+            /*text-decoration-color:  red;*/
+            /*does not change the actual text color.It only changes the color of the text decorations (like underlines, overlines, strikethroughs) if they exist */
+            color: red;
+        }
+
+        #black:checked~p {
+            color: black;
+        }
+
+        #blue:checked~p {
+            color: blue;
+        }
+
+        /* Case */
+        #uppercase:checked~p {
+            text-transform: uppercase;
+        }
+
+        #lowercase:checked~p {
+            text-transform: lowercase;
+        }
+
+        #capitalize:checked~p {
+            text-transform: capitalize;
+        }
+
+        /* Align */
+        #center:checked~p {
+            text-align: center;
+        }
+
+        #right:checked~p {
+            text-align: right;
+        }
+
+        #justify:checked~p {
+            text-align: justify;
+        }
+
+        /* Shadow */
+        #x:checked~p {
+            text-shadow: 10px 0px 5px red;
+        }
+
+        #y:checked~p {
+            text-shadow: 0px 10px 5px red;
+        }
+
+        #xy:checked~p {
+            text-shadow: 10px 10px 5px red;
+        }
+
+        /* Decoration */
+        #underline:checked~p {
+            text-decoration-line: underline;
+        }
+
+        #outline:checked~p {
+            text-decoration-line: overline;
+        }
+
+        #linethrough:checked~p {
+            text-decoration-line: line-through;
+        }
+
+        /* Style */
+        #wavy:checked~p {
+            /* text-decoration-style: wavy; */
+            /*not work like this .... */
+            text-decoration-line: underline;   /* must have a line */
+            text-decoration-style: wavy;
+        }
+
+        #double:checked~p {
+            text-decoration-line: underline;   /* must have a line */
+            text-decoration-style: double;
+        }
+
+        #dashed:checked~p {
+            /* text-decoration-line: underline;    */
+            /* text-decoration-style: dashed; */
+            text-decoration: underline dashed
+        }
+    </style>
+    
+    
+    
+  
+
+
+</head>
+
+<body>
+
+    <!-- <div id="color"> -->
+    Color: 
+    <label for="">Red</label><input type="radio" name="clr" id="red">
+    <label for="">Black</label><input type="radio" name="clr" id="black">
+    <label for="">Blue</label><input type="radio" name="clr" id="blue">
+    <br>
+    <!-- </div> -->
+    <!-- <div id="case"> -->
+    Case: 
+    <label for="">uppercase</label><input type="radio" name="case" id="uppercase">
+    <label for="">lowercase</label><input type="radio" name="case" id="lowercase">
+    <label for="">capitalize</label><input type="radio" name="case" id="capitalize">
+    <br>
+    <!-- </div> -->
+    <!-- <div id="align"> -->
+    Align: 
+    <label for="">center</label><input type="radio" name="align" id="center">
+    <label for="">right</label><input type="radio" name="align" id="right">
+    <label for="">justify</label><input type="radio" name="align" id="justify">
+    <br>
+    <!-- </div> -->
+    <!-- <div id="shadow"> -->
+    Shadow: 
+    <label for="">x-axis</label><input type="radio" name="shadow" id="x">
+    <label for="">y-axis</label><input type="radio" name="shadow" id="y">
+    <label for="">xy-axix</label><input type="radio" name="shadow" id="xy">
+    <br>
+    <!-- </div> -->
+    <!-- <div id="decoration"> -->
+    Decoration: 
+    <label for="">underline</label><input type="radio" name="decor" id="underline">
+    <label for="">overline</label><input type="radio" name="decor" id="outline">
+    <label for="">linethrough</label><input type="radio" name="decor" id="linethrough">
+    <br>
+    <!-- </div> -->
+    <!-- <div id="styleBtn"> -->
+    Style: 
+    <label for="">wavy</label><input type="radio" name="style" id="wavy">
+    <label for="">double</label><input type="radio" name="style" id="double">
+    <label for="">dashed</label><input type="radio" name="style" id="dashed">
+    <br>
+    <!-- </div> -->
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione earum, ducimus officiis suscipit excepturi
+        tempora, quibusdam fugiat adipisci, fugit quisquam repellat obcaecati tenetur? Consequatur possimus deserunt,
+        quod dignissimos perferendis ipsa!
+        Vel quidem debitis aliquid, vero odit, possimus consectetur quo dolor ab rem dignissimos omnis corrupti magni
+        molestiae nisi, iusto explicabo iure? Doloribus excepturi corporis quibusdam quis inventore eveniet reiciendis
+        iure.
+        Ex sapiente odit similique, ab ad numquam commodi accusantium repudiandae omnis quos! Nesciunt a accusantium est
+        nam adipisci. Reprehenderit similique eius quia! Ratione expedita adipisci ipsa accusantium animi voluptas
+        reiciendis!</p>
+</body>
+
+</html>

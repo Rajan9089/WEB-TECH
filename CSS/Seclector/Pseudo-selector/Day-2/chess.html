@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* descendent selector or heirarchical selector */
+
+        /* tr:nth-child(odd) td:nth-child(odd){
+            background-color: black;
+        }
+        tr:nth-child(even) td:nth-child(even) {
+            background-color: black;
+        } */
+
+        /* parent > child selector */
+
+        /* tr:nth-child(odd) > td:nth-child(odd){
+            background-color: black;
+        }
+        tr:nth-child(even) > td:nth-child(even) {
+            background-color: black;
+        } */
+
+
+        /* grouping selector*/
+         tr:nth-child(odd) td:nth-child(odd) ,tr:nth-child(even)  td:nth-child(even)  {
+            background-color: black;
+        }
+
+        </style>
+</head>
+<body>
+    <!-- odd row odd td 
+     even row even td
+     and provide black color 
+     
+     table>tr*8>td*8
+
+     -->
+
+     <table border="" cellspacing="0" cellpadding="30px" align="center">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        
+     </table>
+</body>
+</html>

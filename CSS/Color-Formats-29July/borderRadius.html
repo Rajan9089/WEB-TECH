@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* 1.fancy border radius generator
+           2.gradient generator */
+        /* section{
+            height: 500px;
+            width: 500px;
+            border-style: solid;
+            border-style: dashed;
+            border-style: dotted;
+            border-style: groove;
+            background-image: url(./tillak-removebg-preview.png) ,url('https://imgs.search.brave.com/BlZn6Cgg8pnblrIC9qNjmztnAbNq2aTPR0W4HqSk1_8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGFy/c3VuZm9sZGVkLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/My8wNi9QdW5lZXQt/U3VwZXJzdGFyLWlt/YWdlLmpwZw');
+            background-repeat: no-repeat, no-repeat;
+            background-size: 90px ,cover;
+            background-position: center center, center top;
+
+
+        } */
+        section {
+            height: 200px;
+            width: 200px;
+            border-radius: 72% 28% 70% 30% / 67% 30% 70% 33%;
+            background-image: linear-gradient(to right top,
+                    #051937,
+                    #004d7a,
+                    #008793,
+                    #00bf72,
+                    #a8eb12);
+        }
+
+        .sec1 {
+            border-radius: 0% 100% 0% 100% / 67% 30% 70% 33%;
+            background-image: linear-gradient(to right top,
+                    #d16ba5,
+                    #c777b9,
+                    #ba83ca,
+                    #aa8fd8,
+                    #9a9ae1,
+                    #8aa7ec,
+                    #79b3f4,
+                    #69bff8,
+                    #52cffe,
+                    #41dfff,
+                    #46eefa,
+                    #5ffbf1);
+        }
+
+        .sec2 {
+            border-radius: 0% 100% 0% 100% / 100% 100% 0% 0%;
+            background: #020024;
+            background: linear-gradient(90deg,
+                    rgba(2, 0, 36, 1) 0%,
+                    rgba(9, 9, 121, 1) 35%,
+                    rgba(0, 212, 255, 1) 100%);
+        }
+
+        .sec3 {
+            border-radius: 50% 50% 0% 100% / 100% 100% 0% 0%;
+            background: #eeaeca;
+            background: radial-gradient(circle,
+                    rgba(238, 174, 202, 1) 0%,
+                    rgba(148, 187, 233, 1) 100%);
+        }
+
+        .sec4 {
+            border-radius: 50% 50% 0% 100% / 45% 100% 0% 55%;
+            background: #833ab4;
+            background: linear-gradient(90deg,
+                    rgba(131, 58, 180, 1) 0%,
+                    rgba(253, 29, 29, 1) 50%,
+                    rgba(252, 176, 69, 1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <section></section>
+    <section class="sec1"></section>
+    <section class="sec2"></section>
+    <section class="sec3"></section>
+    <section class="sec4"></section>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+table{
+    border-collapse: collapse;
+}
+.hydrogen {
+    background-color: #FBB4AE;
+    border-right: none;
+    border-top: none;
+}
+
+small {
+    font-size: 10px;
+}
+
+.First {
+    background-color: #E5D8BD;
+}
+
+.second {
+    background-color: #FFFFCC;
+}
+
+.metalloids {
+    background-color: #B2885A;
+}
+
+.Eight {
+    background-color: #B3CDE3;
+}
+
+.seven {
+    background-color: #CCEBC5;
+}
+
+.four {
+    background-color: #DECBE4;
+}
+
+.third {
+    background-color: #FDDAEC;
+}
+
+.middle {
+    background-color: #FDCDAC;
+}
+
+.lalu {
+    background-color: #F2F2F2;
+}
+
+.aclr {
+    background-color: #CBD5E8;
+}

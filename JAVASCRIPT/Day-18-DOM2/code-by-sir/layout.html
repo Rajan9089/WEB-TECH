@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .containerA {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            border: 2px solid black;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .cards {
+            height: 300px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let body = document.body;
+        let section = document.createElement('section')
+        section.classList.add('container')
+        for (let i = 0; i <= 100; i++) {
+            let card = document.createElement('div')
+            card.classList.add('cards')
+            section.appendChild(card)
+        }
+
+        body.appendChild(section)
+
+    </script>
+</body>
+
+</html>

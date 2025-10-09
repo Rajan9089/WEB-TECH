@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    div {
+      width: 200px;
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    /* Change the NEXT div when current div is hovered */
+    .row1:hover + .row2 {
+      background-color: yellow;
+    }
+    .row2:hover + .row3 {
+      background-color: red;
+    }
+    .row3:hover + .row4 {
+      background-color: green;
+    }
+    .row4:hover ~ .row1 {
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+
+<div class="row1">Row 1</div>
+<div class="row2">Row 2</div>
+<div class="row3">Row 3</div>
+<div class="row4">Row 4</div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+universal selector
+*{
+    background-color: rgb(159, 179, 179);
+    color: red;
+    margin: 0px;
+}
+
+
+/* h1,h2.demo,h3#cool {
+    background-color: red;
+} */
+
+
+h1{
+    background-color: brown;
+}
+
+h2.demo{
+    background-color: rgb(120, 88, 95);
+}
+
+h3#cool{
+    background-color: tomato;
+}
+

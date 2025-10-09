@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+
+        .container {
+            height: 400px;
+            width: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-wrap: wrap;
+            column-gap: 20px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+
+        .addColor {
+            color: red;
+            font-weight: bold;
+        }
+        span{
+            
+            font-size: 30px;
+            border: 1.5px solid rgb(29, 26, 22);
+            border-radius: 30%;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="inp">
+    <div class="container">
+
+        <span class="cell">a</span>
+        <span class="cell">b</span>
+        <span class="cell">c</span>
+        <span class="cell">d</span>
+        <span class="cell">e</span>
+        <span class="cell">f</span>
+        <span class="cell">g</span>
+        <span class="cell">h</span>
+        <span class="cell">i</span>
+        <span class="cell">j</span>
+        <span class="cell">k</span>
+        <span class="cell">l</span>
+        <span class="cell">m</span>
+        <span class="cell">n</span>
+        <span class="cell">o</span>
+        <span class="cell">p</span>
+        <span class="cell">q</span>
+        <span class="cell">r</span>
+        <span class="cell">s</span>
+        <span class="cell">t</span>
+        <span class="cell">u</span>
+        <span class="cell">v</span>
+        <span class="cell">w</span>
+        <span class="cell">x</span>
+        <span class="cell">y</span>
+        <span class="cell">z</span>
+
+
+    </div>
+
+    <script>
+
+
+        let inp = document.querySelector('#inp');
+        let spans = document.querySelectorAll('.cell');
+
+        inp.addEventListener('keypress', (e) => {
+            let key = e.key.toLowerCase();
+            spans.forEach((el) => {
+                if (el.textContent == key) {
+                    el.classList.add('addColor');
+                }
+            })
+        })
+
+
+        // let s1 = document.querySelector('.s1');
+        // let inp = document.querySelector('#inp')
+        // document.querySelectorAll('.cell').forEach((el) => {
+        //     inp.addEventListener('keypress', (e) => {
+        //         if (e.key == el.textContent) {
+        //             el.classList.add('addColor');
+        //         }
+        //     })
+        // })
+
+
+        // inp.addEventListener('keypress', (e) => {
+        // if (e.key == 'a') {
+        //     s1.classList.add('addColor');
+        // }
+        // })
+    </script>
+</body>
+
+</html>

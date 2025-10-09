@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div {
+            height: 200px;
+            width: 140px;
+            /* border: 2px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: 0.4s ease all;
+        }
+
+        div img {
+            height: 100%;
+        }
+
+        .rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="car" style="top:0px; left:0px">
+        <img src="https://freepngimg.com/thumb/car/146513-car-top-view-png-image-high-quality.png" alt="">
+    </div>
+
+    <script>
+        let car = document.querySelector('.car')
+        console.log(parseInt(car.style.top));
+
+        window.addEventListener('keypress', (e) => {
+            if (e.key.toLowerCase() == 'a') {
+                car.style.left = parseInt(car.style.left) - 10 + 'px';
+            }
+            if (e.key.toLowerCase() == 'w') {
+                car.style.top = parseInt(car.style.top) - 10 + 'px';
+            }
+            if (e.key.toLowerCase() == 'd') {
+                car.style.left = parseInt(car.style.left) + 10 + 'px';
+            }
+            if (e.key.toLowerCase() == 's') {
+                car.style.top = parseInt(car.style.top) + 10 + 'px';
+            }
+            if (e.key.toLowerCase() == 'r') {
+                car.classList.toggle('rotate')
+            }
+
+        })
+    </script>
+</body>
+
+</html>

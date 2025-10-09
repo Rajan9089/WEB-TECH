@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 10px;
+            margin: 100px auto;
+        }
+
+        .container {
+            height: 500px;
+            width: 500px;
+            display: flex;
+            background-color: aqua;
+            align-items: center;
+            justify-content: center;
+            column-gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #div1,
+        #div2 {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(49, 128, 49);
+            border: 1.5px solid rgb(29, 26, 22);
+            border-radius: 30%;
+            font-size: 120px;
+
+        }
+
+        #div3 {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(149, 149, 189);
+            border: 2px solid rgb(29, 26, 22);
+            border-radius: 50%;
+            font-size: 100px;
+
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 24px;
+            display: flex;
+            margin: auto;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <section class="container">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </section>
+    <button>Click</button>
+    <script>
+    
+
+        let obj = {
+            '⚀': 1,
+            '⚁': 2,
+            '⚂': 3,
+            '⚃': 4,
+            '⚄': 5,
+            '⚅': 6
+        };
+
+
+        let div1 = document.querySelector('#div1');
+        let div2 = document.querySelector('#div2');
+        let div3 = document.querySelector('#div3');
+        let btn = document.querySelector('button');
+
+
+        btn.addEventListener('click', () => {
+            let n = Object.keys(obj).length;
+            let randomIndex1 = Math.floor(Math.random() * n);
+            let randomIndex2 = Math.floor(Math.random() * n);
+
+            let keys = Object.keys(obj);
+            let values = Object.values(obj);
+            let str1 = keys[randomIndex1]
+            let val1 = values[randomIndex1]
+            let str2 = keys[randomIndex2]
+            let val2 = values[randomIndex2]
+
+            div1.innerHTML = str1;
+            div2.innerHTML = str2;
+            div3.innerHTML = val1 + val2;
+        })
+      
+
+
+    </script>
+</body>
+
+</html>

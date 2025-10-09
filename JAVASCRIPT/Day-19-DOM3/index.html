@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            width: 80vw;
+            padding: 40px;
+            border: 2px solid black;
+            border-radius: 40px;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card{
+            height: 300px;
+            width: 250px;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .card img{
+            height: 150px;
+            width: 80%;
+
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let data=[
+            {
+                pname: 'Iphone',
+                price: 100000,
+                url:"https://images.unsplash.com/photo-1591337676887-a217a6970a8a?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                pname: 'Washing Machine',
+                price: 20000,
+                url:'https://img.freepik.com/premium-photo/washing-machine-with-white-background-high-quality_889056-17818.jpg?w=740'
+            },
+            {
+                pname: 'AC',
+                price: 30000,
+                url:'https://static.vecteezy.com/system/resources/previews/012/909/758/non_2x/air-conditioner-appliance-free-png.png'
+            },
+            {
+                pname: 'TV',
+                price: 40000,
+                url:'https://w7.pngwing.com/pngs/32/256/png-transparent-led-backlit-lcd-4k-resolution-smart-tv-ultra-high-definition-television-tv-smart-television-electronics-hdmi.png'
+            },
+            {
+                pname: 'Iphone',
+                price: 100000,
+                url:"https://images.unsplash.com/photo-1591337676887-a217a6970a8a?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
+                pname: 'Washing Machine',
+                price: 20000,
+                url:'https://img.freepik.com/premium-photo/washing-machine-with-white-background-high-quality_889056-17818.jpg?w=740'
+            },
+            {
+                pname: 'AC',
+                price: 30000,
+                url:'https://static.vecteezy.com/system/resources/previews/012/909/758/non_2x/air-conditioner-appliance-free-png.png'
+            },
+            {
+                pname: 'TV',
+                price: 40000,
+                url:'https://w7.pngwing.com/pngs/32/256/png-transparent-led-backlit-lcd-4k-resolution-smart-tv-ultra-high-definition-television-tv-smart-television-electronics-hdmi.png'
+            }
+        ]
+
+        let body = document.body;
+        let container = document.createElement('section');
+        container.classList.add('container');
+        body.appendChild(container);
+        data.forEach((el)=>{
+            let card = document.createElement('div');
+            card.classList.add('card');
+            let name = document.createElement('h2');
+            name.textContent = el.pname;
+            let price = document.createElement('p');
+            price.textContent = el.price;
+            let img = document.createElement('img');
+            img.src = el.url;
+            
+            card.appendChild(name);
+            card.appendChild(price);
+            card.prepend(img);
+            container.appendChild(card);
+        })
+
+    </script>
+    
+</body>
+</html> 

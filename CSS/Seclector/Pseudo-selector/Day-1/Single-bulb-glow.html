@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 0px;
+        }
+        #on:checked ~ #on-bulb{
+            height: 200px;
+            width: 200px;
+        }
+        #off:checked ~ #off-bulb{
+            height: 200px;
+            width: 200px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Electric Bulb</h1>
+        On <input type="radio" name="click" id="on">
+        Off <input type="radio" name="click" id="off">
+        <br>
+        <br>
+        <img id="on-bulb" src="https://cdn.vectorstock.com/i/preview-1x/93/67/glowing-yellow-light-bulb-vector-1279367.jpg" alt="">
+        <img id="off-bulb" src="https://jooinn.com/images/isolated-light-bulb-1.jpg" alt="">
+    </center>
+</body>
+
+</html>

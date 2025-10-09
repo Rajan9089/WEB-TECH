@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cube{
+            height: 500px;
+            width: 500px;
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: repeat(3 , 1fr);
+            grid-template-rows: repeat(3 , 1fr);
+        }
+        .cells{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="cells"></div>
+        <div class="cells"></div>
+        <div class="cells"></div>
+        <div class="cells"></div>
+        <div class="cells"></div>
+        <div class="cells"></div>
+        <div class="cells"></div>
+        <div class="cells"></div>
+        <div class="cells"></div>
+    </div>
+
+    <script>
+        let allCells = document.querySelectorAll('.cells');
+        allCells.forEach((el)=>{
+            el.style.backgroundColor = randomColor();
+            el.addEventListener('click', ()=>{
+                el.style.backgroundColor = randomColor();
+            })
+        })
+
+        function randomColor(){
+            let r = Math.round(Math.random()*255);
+            let g = Math.round(Math.random()*255);
+            let b = Math.round(Math.random()*255);
+            return `rgb(${r},${g},${b})`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* profile */
+        img{
+            height: 0px;
+            /* display: none; */
+        }
+        .r1-pic:checked+img{
+            /* display: inline-block;*/
+            height: 100px;
+        }
+        .r2-pic:checked+img{
+            
+            height: 100px;
+        }
+        .r3-pic:checked+img{
+           
+            height: 100px;
+        }
+
+        /* email */
+       
+        .r1-email:checked+span::after{
+            content: "@gmail.com";
+        }
+        .r2-email:checked+span::after{
+            content: "@gmail.com";
+        }
+        .r3-email:checked+span::after{
+            content: "@gmail.com";
+        }
+
+        /* Name */
+
+        .name-male:checked+span::before{
+            content: "Mr. ";
+        }
+        .name-female:checked+span::before{
+            content: "Miss. ";
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <table border="" cellpadding="50" cellspacing="0" align="center">
+        <tr>
+            <th>Profile</th>
+            <th>Email</th>
+            <th>Name</th>
+        </tr>
+        <tr >
+
+            <td >
+                <input type="checkbox" class="r1-pic">
+                <img src="https://thumbs.dreamstime.com/b/business-profile-icon-flat-design-concept-isolated-white-background-55341194.jpg"
+                     alt="Profile">
+            </td>
+            <td>
+                <input type="checkbox" class="r1-email">
+                <span>abc</span>
+            </td>
+            <td>
+                <input type="checkbox" class="name-male">
+                <span>Ram</span>
+            </td>
+
+
+        </tr>
+        <tr>
+
+            <td id="r2-profile">
+                <input type="checkbox" class="r2-pic">
+                <img src="https://cdn-icons-png.freepik.com/256/12081/12081103.png?semt=ais_white_label"
+                    height="100px" alt="Profile">
+            </td>
+            <td>
+                <input type="checkbox" class="r2-email">
+                <span>xyz</span>
+            </td>
+            <td>
+                <input type="checkbox" class="name-female">
+                <span>Sita</span>
+            </td>
+        </tr>
+        <tr>
+
+            <td id="r3-profile">
+                <input type="checkbox" class="r3-pic">
+                <img src="https://cdn-icons-png.freepik.com/256/17355/17355046.png?semt=ais_white_label"
+                    height="100px" alt="Profile">
+            </td>
+            <td>
+                <input type="checkbox" class="r3-email">
+                <span>pqr</span>
+            </td>
+            <td>
+                <input type="checkbox" class="name-male">
+                <span>Lakshman</span>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

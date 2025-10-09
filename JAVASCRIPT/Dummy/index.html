@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <button onclick="changeColor()" onmouseenter="mouseEvent()">Click</button>
+    <h1>Times of india</h1>
+    <script>
+        let h1 = document.querySelector('h1');
+        function changeColor(){
+            h1.style.backgroundColor = 'red';
+        }
+        function mouseEvent(){
+            console.log('Mouse entered');
+        }
+    </script>
+</body>
+</html>

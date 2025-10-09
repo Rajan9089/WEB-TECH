@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .board {
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="board">
+        <div class="cell" id="c1"></div>
+        <div class="cell" id="c2"></div>
+        <div class="cell" id="c3"></div>
+        <div class="cell" id="c4"></div>
+        <div class="cell" id="c5"></div>
+        <div class="cell" id="c6"></div>
+        <div class="cell" id="c7"></div>
+        <div class="cell" id="c8"></div>
+        <div class="cell" id="c9"></div>
+
+    </div>
+    <script>
+
+        arr = ['0', '✖'];
+        let i = 0;
+
+        let divs = document.querySelectorAll('.cell');
+        // console.log(divs);
+        divs.forEach((el) => {
+            el.addEventListener('click', () => {
+                if (el.innerHTML == '') {
+                    if (i % 2 == 0) {
+                        el.innerHTML = arr[i % 2];
+                    } else {
+                        el.innerHTML = arr[i % 2];
+                    }
+                }
+                i++;
+            })
+        })
+
+
+        // helper function for each cell
+        // function play(cell) {
+        //     if (cell.innerHTML === '') {
+        //         cell.innerHTML = arr[i % 2];
+        //         i++;
+        //     }
+        // }
+
+
+        // document.querySelector('#c1').addEventListener('click', ()=> play(c1));
+        // document.querySelector('#c2').addEventListener('click', () => play(c2));
+        // document.querySelector('#c3').addEventListener('click', () => play(c3));
+        // document.querySelector('#c4').addEventListener('click', () => play(c4));
+        // document.querySelector('#c5').addEventListener('click', () => play(c5));
+        // document.querySelector('#c6').addEventListener('click', () => play(c6));
+        // document.querySelector('#c7').addEventListener('click', () => play(c7));
+        // document.querySelector('#c8').addEventListener('click', () => play(c8));
+        // document.querySelector('#c9').addEventListener('click', () => play(c9));
+
+
+
+
+        // arr = ['0', '✖'];
+        // let i = 0;
+        // let div1 = document.querySelector('#c1');
+        // let div2 = document.querySelector('#c2');
+        // let div3 = document.querySelector('#c3');
+        // let div4 = document.querySelector('#c4');
+        // let div5 = document.querySelector('#c5');
+        // let div6 = document.querySelector('#c6');
+        // let div7 = document.querySelector('#c7');
+        // let div8 = document.querySelector('#c8');
+        // let div9 = document.querySelector('#c9');
+        // div1.addEventListener('click', ()=>{
+        //     if(div1.innerHTML === ''){
+        //         div1.innerHTML = arr[i%2];
+        //     }
+        //     i = i + 1;
+        // })
+        // div2.addEventListener('click', ()=>{
+        //     if(div2.innerHTML === ''){
+        //         div2.innerHTML = arr[i%2];
+        //     }
+        //     i = i + 1;
+        // })
+        // div3.addEventListener('click', ()=>{
+        //     if(div3.innerHTML === ''){
+        //         div3.innerHTML = arr[i%2];
+        //     }
+        //     i = i + 1;
+        // })
+        // div4.addEventListener('click', ()=>{
+        //     if(div4.innerHTML === ''){
+        //         div4.innerHTML = arr[i%2];
+        //     }
+        //     i = i + 1;
+        // })
+        // div5.addEventListener('click', ()=>{
+        //     if(div5.innerHTML === ''){
+        //         div5.innerHTML = arr[i%2];
+        //     }
+        //     i = i + 1;
+        // })
+        // div6.addEventListener('click', ()=>{
+        //     if(div6.innerHTML === ''){
+        //         div6.innerHTML = arr[i%2];
+        //     }
+        //     i = i + 1;
+        // })
+        // div7.addEventListener('click', ()=>{
+        //     if(div7.innerHTML === ''){
+        //         div7.innerHTML = arr[i%2];
+        //     }
+        //     i = i + 1;
+        // })
+        // div8.addEventListener('click', ()=>{
+        //     if(div8.innerHTML === ''){
+        //         div8.innerHTML = arr[i%2];
+        //     }
+        //     i = i + 1;
+        // })
+        // div9.addEventListener('click', ()=>{
+        //     if(div9.innerHTML === ''){
+        //         div9.innerHTML = arr[i%2];
+        //     }
+        //     i = i + 1;
+        // })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkbox Controlled Boxes (No JS)</title>
+  <style>
+    
+
+    div,img,strong{
+      visibility: hidden;
+      /* height: 0px; */
+    }
+    
+
+    /* Hidden by default */
+    .content-box {
+      height: 0px;
+      /* visibility: hidden; */
+    }
+
+    /* Show big box when main checkbox is checked */
+    #main-toggle:checked +.content-box{
+      height: 400px;
+      width: 400px;
+      border: 2px solid #333;
+      padding: 12px;
+      visibility: visible;
+    }
+
+    #image-toggle:checked + img{
+      visibility: visible;
+      height: 300px;
+      width: 300px;
+    }
+    #name-toggle:checked + strong{
+      visibility: visible;
+      height: 100px;
+      width: 100px;
+    }
+
+
+
+
+    
+
+    
+  </style>
+</head>
+
+<body>
+
+  <!-- Main controller -->
+  <input type="checkbox" id="main-toggle"> Show Box
+
+
+  <div class="content-box">
+
+    <input name="inner" type="checkbox" id="image-toggle">
+
+    <img src="https://3.bp.blogspot.com/_OdUwIpMSEcM/S9v6ho-rKuI/AAAAAAAAABw/x8UGUF2LwMQ/s1600/radha_krishna.jpg"
+      height="50px" alt="Sample Image">
+
+
+    <br>
+
+    <input name="inner" type="checkbox" id="name-toggle">
+
+    <!-- <div class="name-box"> -->
+      <strong>Rajan Kumar</strong>
+    <!-- </div> -->
+  </div>
+
+</body>
+
+</html>

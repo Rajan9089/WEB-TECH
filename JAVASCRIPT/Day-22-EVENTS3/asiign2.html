@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Random Images</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            width: 600px;
+            height: 600px;
+            margin: 50px auto;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://picsum.photos/seed/1/300" class="image">
+        <img src="https://picsum.photos/seed/2/300" class="image">
+        <img src="https://picsum.photos/seed/3/300" class="image">
+        <img src="https://picsum.photos/seed/4/300" class="image">
+        <img src="https://picsum.photos/seed/5/300" class="image">
+        <img src="https://picsum.photos/seed/6/300" class="image">
+        <img src="https://picsum.photos/seed/7/300" class="image">
+        <img src="https://picsum.photos/seed/8/300" class="image">
+        <img src="https://picsum.photos/seed/9/300" class="image">
+    </div>
+
+    <script>
+        let arr = [
+            "https://picsum.photos/seed/10/300",
+            "https://picsum.photos/seed/11/300",
+            "https://picsum.photos/seed/12/300",
+            "https://picsum.photos/seed/13/300",
+            "https://picsum.photos/seed/14/300",
+            "https://picsum.photos/seed/15/300",
+            "https://picsum.photos/seed/16/300",
+            "https://picsum.photos/seed/17/300",
+            "https://picsum.photos/seed/18/300",
+            "https://picsum.photos/seed/19/300",
+            "https://picsum.photos/seed/20/300"
+        ];
+        let images = document.querySelectorAll('.image');
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                let random = Math.floor(Math.random() * arr.length);
+                img.src = arr[random];
+            });
+        });
+    </script>
+</body>
+</html>

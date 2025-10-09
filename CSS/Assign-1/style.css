@@ -1,0 +1,25 @@
+#name{
+    background-color: green;
+}
+#age{
+    background-color: blue;
+    color: white;
+}
+#contact{
+    background-color: aquamarine;
+}
+.second-row{
+    background-color: red;
+    color: blue;
+}
+
+/* id and class */ 
+#third_id.third_class{
+    background-color: yellow;
+}
+
+/* tag and class */
+td.forth{
+    background-color: aqua;
+    color: brown;   
+}

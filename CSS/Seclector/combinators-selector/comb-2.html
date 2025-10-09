@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* give red colour to list-item-3.1 to list-item-3.6 */
+        ul>ul>li{
+            color: red;
+        }
+
+        /* give green colour to list-item-1 to list-item-6 */
+        /* first way is body selector*/
+        /* body>ul>li{
+            color: green;
+        } */
+
+        /* second way is by selecting 'id' */
+        #left_list>li{
+            color: green;
+        }
+
+        /* blue color to  list-item-3.3.1 to list-item-3.3.4 */
+        ul>ul>ol>li{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul id="left_list">
+        <li>list-item-1</li>
+        <li>list-item-2</li>
+        <li>list-item-3</li>
+        <ul>
+            <li>list-item-3.1</li>
+            <li>list-item-3.2</li>
+            <li>list-item-3.3</li>
+            <ol>
+                <li>list-item-3.3.1</li>
+                <li>list-item-3.3.2</li>
+                <li>list-item-3.3.3</li>
+                <li>list-item-3.3.4</li>
+            </ol>
+            <li>list-item-3.4</li>
+            <li>list-item-3.5</li>
+            <li>list-item-3.6</li>
+        </ul>
+        <li>list-item-4</li>
+        <li>list-item-5</li>
+        <li>list-item-6</li>
+    </ul>
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <label for="UserName"></label>
+    <input type="text" name="" id="UserName" class="user">
+
+    <h1>Hello</h1>
+    <div class="card"></div>
+    <button class="btn1">Click</button>
+
+    <script>
+
+        let btn = document.querySelector('.btn1');
+
+        let h1 = document.querySelector('h1');
+
+        let div = document.querySelector('.card');
+
+        btn.addEventListener('click', ()=>{
+            h1.innerHTML = 'Bye';
+        })
+        btn.addEventListener('dblclick', ()=>{
+            h1.innerHTML = 'Bye Bye';
+        })
+        btn.addEventListener('mouseenter', ()=>{
+            h1.innerHTML = 'welcome';
+        })
+        btn.addEventListener('mouseout', ()=>{
+            h1.innerHTML = 'Good Bye';
+        })
+        div.addEventListener('mousemove', ()=>{
+            console.log('Mouse is moving');
+        })
+
+        //! Keyboard events
+        let user = document.querySelector('.user');
+        user.addEventListener('keydown', ()=>{
+            console.log('Key is Down');
+        })
+        user.addEventListener('keypress', ()=>{
+            console.log('Key is Pressed');
+        })
+        user.addEventListener('keyup', ()=>{
+            console.log('Key is Up');
+        })
+
+
+    </script>
+</body>
+</html>

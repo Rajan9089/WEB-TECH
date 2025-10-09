@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 500px;
+            width: 500px;
+            border: 2px solid black;
+            margin: 100px auto;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .items {
+            background-color: cadetblue;
+            border: 2px solid brown;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .items img {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="items item1"></div>
+        <div class="items item2"></div>
+        <div class="items item3"></div>
+        <div class="items item4"></div>
+        <div class="items item5"></div>
+        <div class="items item6"></div>
+        <div class="items item7"></div>
+        <div class="items item8"></div>
+        <div class="items item9"></div>
+
+    </section>
+
+    <script>
+
+        let cross = 'https://www.nicepng.com/png/full/12-123212_delete-tic-tac-toe-cross.png'
+        let circle = 'https://tse4.mm.bing.net/th/id/OIP.78VoQ1yusrNgMjCOwnK7RwHaF7?pid=Api&P=0&h=180'
+
+        let divs = document.querySelectorAll('.items');
+        // console.log(divs);
+        let count = 0;
+        divs.forEach((el) => {
+            el.addEventListener('click', () => {
+                if (el.innerHTML == '') {
+                    if (count % 2 == 0) {
+                        el.innerHTML = `<img src = ${cross}>`
+                    } else {
+                        el.innerHTML = `<img src = ${circle}>`
+                    }
+
+                }
+                count++;
+            })
+        })
+
+
+
+    </script>
+</body>
+
+</html>

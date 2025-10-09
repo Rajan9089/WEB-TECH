@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* set initial height width and default color of acqua */
+        section{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+        }
+        /* on cheching respective color , background color should be change to that color only */
+        #red:checked ~ section {
+            background-color: red;
+        }
+        #blue:checked ~ section {
+            background-color: blue;
+        }
+        #yellow:checked ~ section {
+            background-color: yellow;
+        }
+        #green:checked ~ section {
+            background-color: green;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <center>
+        red <input type="radio" name="color" id="red">
+        Blue <input type="radio" name="color" id="blue">
+        Yoellow <input type="radio" name="color" id="yellow">
+        Green <input type="radio" name="color" id="green">
+
+        <section></section>
+    </center>
+</body>
+
+</html>
