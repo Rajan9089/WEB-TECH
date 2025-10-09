@@ -1,0 +1,25 @@
+Web Technology Overview
+Formating Tag
+Anchor Tag
+List
+Marquee Tag
+Tables
+Forms
+Media Tag and Sementic Tag
+IFrame, (map,QR code)
+
+
+https://freesvg.org/img/ubuplane.png
+
+https://freesvg.org/img/P-51-D-3.png
+
+https://wallpapers.com/images/hd/space_-jam_-logo_with_-alien_-character-p8ctuu32zacdn108.jpg
+
+https://freesvg.org/img/1536665738.png
+
+https://freesvg.org/img/1308056492.png
+
+https://freesvg.org/img/aereo_militare.png
+
+https://freesvg.org/img/1546428734.png
+
