@@ -120,6 +120,7 @@
 // A method is function which is declared inside the object 
 // let pname = 'Varun'
 // let age = 40
+
 // ! this keyword
 // this keyword is a referencing variable 
 // it will reference to the object which is currently executing the function
@@ -149,6 +150,7 @@
 //          console.log(this); //window -> it will borrow from the parent env 
 //     }
 // }
+
 // ! how to call a method
 // objName.method()
 // obj.details()

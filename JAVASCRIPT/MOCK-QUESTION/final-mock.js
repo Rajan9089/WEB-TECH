@@ -2,7 +2,7 @@
 // ! 2 -> Explain Event Propagation
 // ! 3 -> What is DOM 
 // ! 4 -> How do we perform CRUD over html elements
-// ! 5 -> Explain call , apply , bind in javascript
+// ! 5 -> Explain call, apply, bind in javascript
 // ! 6 -> create an unordered list from the given array 
 // let arr  = ['one' , 'two' , 'three' , 'four'] 
 // ! 7 -> array execution ques -> //https://codeshare.io/vAgpb4
@@ -54,6 +54,7 @@
 // ! Ques 31 -> What is spread and rest
 // ! Ques 32 -> What is module
 // ! Ques 33 -> What is json, what all the data types it supports 
+
 
 // ! 1 -> Create form and take the input as username and email , if username is abc and email is abc@gmail.com and password abc@123 then display a popup as login success , otherwise login failed
 // ! 2 -> Explain Event Propagation

@@ -24,11 +24,12 @@
 // console.log(str3 == str4);
 
 // ! immutability
-// let str = 'java';
-// str[0] = 'k'
-// console.log(str[0]);
-// str = 'script'
-// console.log(str);
+// let str = 'java'; 
+// str[0] = 'k' // → ❌ This does nothing.
+// console.log(str[0]); // j
+// console.log(str); // java
+// str = 'script'  // ✅ This creates a new string and reassigns it to the variable str.
+// console.log(str); // script
 
 
 // // ! concatination
@@ -86,7 +87,7 @@
 // if the character is not present in the string it will return -1
 // let str = 'javascripts'
 // console.log(str.indexOf('s'));//4
-// console.log(str.indexOf('s'));//-1
+// console.log(str.indexOf('n'));//-1 // since 'n' is not present
 
 // !7. lastIndexOf('char')
 // it will return the index of last occurrence of the character
@@ -96,10 +97,12 @@
 
 // ! 8. charAt(index)
 // it will return the character present at a particular index
+// but if character is not present at that particular index, it will return empty string.
 // let str = 'javascript'
 // console.log(str.charAt(0)); // j
 // console.log(str.charAt(9)); // t
 // console.log(str.charAt(20)); // ''
+// console.log(str.charAt(-1)); // ''
 
 
 
@@ -148,7 +151,7 @@
 // let temp = str.replace('HA' , 'HE')
 // console.log(temp);
 // !12. replaceAll('prevSubst' , 'newSubst')
-// it will replace the all tge occurence of a substring with a new substing
+// it will replace the all the occurence of a substring with a new substing
 // let str = 'HAHAHAHAHAHEHEHEHEHE'
 // let temp = str.replaceAll('HA' , 'HE')
 // let temp1 = str.replaceAll('HE' , 'HA')
@@ -180,6 +183,7 @@
 
 // ! at()
 // at is similar to charAt
+// it will return the character present at a particular index.
 // at will accept the negative index also
 // let str = 'javascript'
 // console.log(str.charAt(-1));
@@ -194,6 +198,8 @@
 // ! ' ' as a separator will return all the words as the elements of the array
 // console.log(str.split(' ')); // ['This', 'is', 'Javascript']
 // ! '' as a separator will return all the characters as the elements of the array
+// console.log(str.split(''));  // (18) ['T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'J', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+
 // console.log('javascript'.split('')); // ['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
 
 // let str2 = 'javascript';
@@ -207,7 +213,7 @@
 // ! charCodeAt()
 // it will return the ascii value of a character present at a particular index
 // let str = 'JAVA'
-// console.log(str.charAt(1));
+// console.log(str.charAt(1)); // A
 // console.log(str.charCodeAt(1));//65
 // ! fromCharCode()
 // it will convert ascii values to the characters
@@ -263,7 +269,7 @@
 // let numOfSpaces = words.length-1;
 // console.log(numOfSpaces);
 
-// console.log(' we '.split(' '));
+// console.log(' we '.split(' '));  // (3) ['', 'we', '']
 
 // ! Ques4 -> w.a.f to return the longest word from a string 
 // function longestWord(str){
@@ -304,8 +310,9 @@ function reverseWords(str){
     let words = str.split(' ');
     for(let i = 0; i<words.length; i++){
         // console.log(words[i]);
-        reversed = words[i] + reversed;
+        // reversed = words[i] + reversed ;     // javaisthis
+        reversed = words[i] + ' ' + reversed ;   // java is this 
     }
     return reversed
 }
-console.log(reverseWords('this is java'));
+console.log(reverseWords('this is java')); // java is this 

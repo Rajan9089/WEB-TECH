@@ -42,8 +42,8 @@
 // ! 5. document.querySelector('')
 // querySelector is an advance method , it will accept all the css selectors
 // it will return the first matching element based on the selector 
-let h1 = document.querySelector('.odd');
-console.log(h1);
+// let h1 = document.querySelector('.odd');
+// console.log(h1);
 
 // ! 6. document.querySelector('')
 // querySelectorAll is an advance method , it will accept all the css selectors
@@ -65,32 +65,62 @@ console.log(h1);
 // it is also used to update the text of the element
 // let first = document.querySelector('#first')
 // console.log(first);
-// first.innerText = 'Hello , Akshay'
-// first.innerHTML = 'Hello , <i>Akshay</i>'
-// first.textContent = 'Hello , <i>Akshay</i>'
+// first.innerText = 'Hello , Akshay'          // Hello , Akshay
+// first.innerText = 'Hello , <i>Akshay</i>'   // Hello , <i>Akshay</i>
+// first.innerHTML = 'Hello , <i>Akshay</i>'      // Hello , Akshay (Akshay is in italic ... on copy pasting nt visible here)
+// first.textContent = 'Hello , <i>Akshay</i>'    // Hello , <i>Akshay</i>
 
-// let para = document.querySelector('.para')
-// console.log(para.innerText);
-// console.log('-----------------------------------');
-// console.log(para.textContent);
-// console.log('-----------------------------------');
-// console.log(para.innerHTML);
+
+
+
+//! Given By ChatGPT
+//! innerText 
+// innerText returns the *visible text content* of the element as displayed on the UI.
+// It ignores hidden elements and respects CSS styles.
+// It can also be used to update the visible text of the element.
+
+//! innerHTML
+// innerHTML returns the *HTML markup* (including tags) inside the element.
+// It can also be used to insert or update HTML content dynamically (not just plain text).
+
+//! textContent
+// textContent returns the *raw text content* of the element as it appears in the HTML file.
+// It includes hidden text (not affected by CSS visibility).
+// It can also be used to update the text content (ignores HTML tags).
+//! ✅ In short:
+
+//! innerText → what you see on screen
+
+//! textContent → what’s actually written in HTML
+
+//! innerHTML → what’s inside the tags (including HTML markup)
+
+
+
+
+
+let para = document.querySelector('.para')
+console.log(para.innerText);
+console.log('-----------------------------------');
+console.log(para.textContent);
+console.log('-----------------------------------');
+console.log(para.innerHTML);
 
 // ! task 1
 // let name = document.querySelector('.name');
 // let inp = prompt('Enter your name');
 // name.innerText = inp
 
-let body = document.body;
-body.innerHTML = '<h1>This is a heading created in js </h1>'
-body.innerHTML = '<h2>This is second heading created in js </h2>'
-body.innerHTML = `<ol>
-<li>Potato</li>
-<li>Tomato</li>
-<li>Cabbage</li>
-</ol>`
-body.innerHTML += `<ul>
-<li>Coffee</li>
-<li>Tea</li>
-<li>Juice</li>
-</ul>`
+// let body = document.body;
+// body.innerHTML = '<h1>This is a heading created in js </h1>'
+// body.innerHTML = '<h2>This is second heading created in js </h2>'
+// body.innerHTML = `<ol>
+// <li>Potato</li>
+// <li>Tomato</li>
+// <li>Cabbage</li>
+// </ol>`
+// body.innerHTML += `<ul>
+// <li>Coffee</li>
+// <li>Tea</li>
+// <li>Juice</li>
+// </ul>`

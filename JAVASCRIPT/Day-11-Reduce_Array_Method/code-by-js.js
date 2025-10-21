@@ -63,8 +63,13 @@
 
 // ! 4. unshift()
 // unshift is used to add the elements at the beginning of the array 
+// unshift() also returns the length of new array
+// let arr = [100,200,300,400]
 // arr.unshift(2,3,4,5)
-// console.log(arr);
+// console.log(arr); // (8) [2, 3, 4, 5, 100, 200, 300, 400]
+// let newLength = arr.unshift();
+// console.log(newLength);   // 8
+
 
 // !10 splice(s.i , deleteCount , newEl1 , newEl2 ..... newEln)
 // splice is used to add or remove the elements at a specific index of the array
@@ -78,7 +83,7 @@
 // arr.splice(1 ,0 , 4,5,6);
 // console.log(arr); //(6) [40, 4, 5, 6, 20, 60]
 // arr.splice(1 , 2 , 10);
-// console.log(arr);
+// console.log(arr); // (5) [40, 10, 6, 20, 60]
 
 
 // ! immutable 
@@ -86,8 +91,8 @@
 // !5. at(index)
 // at will return the element present at a specific index , we can pass negative index also
 // let arr = [10 , 20 , 30 , 40 , 10 , 20]
-// console.log(arr.at(0));
-// console.log(arr.at(-1));
+// console.log(arr.at(0)); // 10
+// console.log(arr.at(-1)); // 20
 
 // !6. includes(element)
 // includes is used to identify if an element is present inside the array or not 
@@ -115,42 +120,55 @@
 // it will modify the original array
 // let arr = [10 , 20 , 30 , 40]
 // arr.reverse()
-// console.log(arr);
+// console.log(arr);  // (4) [40, 30, 20, 10]
 
 // ! question
 // ! 1. reverse the words of the string without using a loop
 // ! 'this is java' -> 'java is this'
 // let str = 'this is java';
 // let words = str.split(' ')
+// console.log(words); // (3) ['this', 'is', 'java']
 // words.reverse()
-// console.log(words);
+// console.log(words);  // (3) ['java', 'is', 'this']
 
 // ! 2. reverse the letters of the string without using a loop
-//  'this is java' -> 'avaj si siht'
+//!  'this is java' -> 'avaj si siht'
+// let str = 'this is java';
+// let letters = str.split('');
+// console.log(letters); //  (12) ['t', 'h', 'i', 's', ' ', 'i', 's', ' ', 'j', 'a', 'v', 'a']
+// letters.reverse()
+// console.log(letters);  // (12) ['a', 'v', 'a', 'j', ' ', 's', 'i', ' ', 's', 'i', 'h', 't']
+// console.log(letters.join(''));  // avaj si siht
+// console.log(letters.join(' '));  // a v a j   s i   s i h t
+
+
 // let str = 'this is java';
 // let letters = str.split(' ');
+// console.log(letters); // (3) ['this', 'is', 'java']
+
 // letters.reverse()
-// console.log(letters);
-// console.log(letters.join(' '));
+// console.log(letters);  // (3) ['java', 'is', 'this']
+// console.log(letters.join(' '));  // java is this
 
 
 // ! 12. toString()
 // it will convert any data type into string
+// returns a string representation of an array
 // let arr = [10  , 20 , 30 , 40]
-// let res = arr.toString() // '10,20,30,40'
-// console.log(res);
+// let res = arr.toString() // '10,20,30,40'    
+// console.log(res);    // 10,20,30,40
 
 // !13. join('sep')
 // join is used to convert an array into string based on the argument
 // let op = arr.join(' ')
-// console.log(op); //'10 20 30 40'
+// console.log(op); // '10 20 30 40'
 
 // ! Ques -> reverse a string without using a loop
 // let str = 'this is java';
 // let rev = str.split(' ').reverse().join(' ')
 // let rev1 = str.split('').reverse().join('')
-// console.log(rev);
-// console.log(rev1);
+// console.log(rev); // java is this
+// console.log(rev1);  // avaj si siht
 
 // !14. sort()
 // sort is used to sort the elements of the array in ascending or descending order
@@ -286,13 +304,14 @@
 // let res  = arr.filter((el , i )=>{
 //     return el;
 // })
-// console.log(res); // []
+// console.log(res); // (4) [4, 6, 9, 12]
+
 // ! Question 
 // let arr = ['virat' , 200 , '' , null , undefined , NaN , 0 , 0n , false , true]
 // let res = arr.filter((el ,i)=>{
 //     return el;
 // })
-// console.log(res); // []
+// console.log(res); // (3) ['virat', 200, true]
 
 // ! convert all the names to Capitalize
 // let names = ['atul' , 'pranav' , 'vishal' , 'ritesh','akshay'];
@@ -328,7 +347,7 @@
 // let reversedNames = names.map((el)=>{
 //     return el.split('').reverse().join('')
 // })
-// console.log(reversedNames);
+// console.log(reversedNames); // (5) ['aylutA', 'avanarp', 'lahsiv', 'hsetir', 'yahska']
 
 
 // ! Ques -> filter all the files related to web technology
@@ -337,7 +356,7 @@
 // let webFiles = files.filter((el)=>{
 //     return el.endsWith('html') || el.endsWith('css') || el.endsWith('js') || el.endsWith('json')
 // })
-// console.log(webFiles);
+// console.log(webFiles); // (4) ['index.html', 'script.js', 'style.css', 'data.json']
 
 
 // ! Ques -> filter all the numeric values;
@@ -345,7 +364,7 @@
 // let numerics = values.filter((el)=>{
 //     return typeof el == 'number'
 // })
-// console.log(numerics);
+// console.log(numerics); // (3) [10, 30, 70]
 
 // ! Homework
 // ! Ques 1 -> filter those names which are having length more than 6
@@ -353,13 +372,13 @@
 // let newNames = names.filter((el , i)=>{
 //     return el.length>6;
 // })
-// console.log(newNames);
+// console.log(newNames);  // (2) ['Atulyaa', 'pranava']
 
 // ! Ques 2 -> filter those names which starts and ends with a vowel
 // let temp = names.filter((el , i)=>{
 //     return 'aeiou'.includes(el.charAt(0).toLowerCase()) && 'aeiou'.includes(el.at(-1).toLowerCase())
 // })
-// console.log(temp);
+// console.log(temp); // ['Atulyaa']
 
 
 
@@ -369,11 +388,11 @@
 // let newArr = price.map((el , i)=>{
 //     return el-el*0.2
 // })
-// console.log(newArr);
+// console.log(newArr); // (4) [12000, 6400, 7200, 1600]
 // let arr2 = newArr.map((el)=>{
 //    return (el>10000) ? el-el*0.1 :el
 // })
-// console.log(arr2);
+// console.log(arr2); // (4) [10800, 6400, 7200, 1600]
 
 // ! Ques 4 -> return the length of all the names in a new array ;
 // let names = ['Atulyaa' , 'pranava' , 'vishal' , 'ritesh','akshay'];
@@ -398,21 +417,35 @@
 // let prod = arr.reduce((acc , el , i , arr)=>{
 //   return acc*el
 // })
+// console.log(sum);  // 100
+// console.log(prod); // 240000
+
+
 // let temp = arr.reduce((acc , el , i , arr)=>{
-//     console.log(acc , el);
+//     // console.log(acc , el);
 //     return acc+el;
 // })
-// console.log(sum);  // 100
-// console.log(prod);
-// console.log(temp);
+// console.log(temp); // 100
+/*
+10 20
+30 30
+60 40
+100
+ */
 // ! after passing initialValue
 // let arr = [10 , 20 , 30 , 40]
 // let temp = arr.reduce((acc , el , i)=>{
-//     //console.log(acc , el);
+//     console.log(acc , el);
 //     return acc+el
 // } , 500)
 // console.log(temp);  // 600
-
+/*
+500 10
+510 20
+530 30
+560 40
+600
+ */
 
 
 // ! reduceRight()
@@ -443,21 +476,21 @@
 // let output = words.reduce((acc , el)=>{
 //     return acc.length>el.length ? acc : el
 // })
-// console.log(output);
+// console.log(output);  // javascript
 // ! Ques 2 -> Return the smallest word in a string by using reduce
 // let str1 = 'this is javascript we are learning'
 // let words = str1.split(' ');
 // let output = words.reduce((acc , el)=>{
 //     return acc.length<el.length ? acc : el
 // })
-// console.log(output);
+// console.log(output);  // we
 
 // ! All array methods (specially -> join() , splice , all Advance Methods)
 // ! All String Methods (specially -> split , slice , includes)
 
 //! https://codeshare.io/5g0Zln
 
-// 3. Using reduce() to Calculate the Sum of Even Numbers
+//! 3. Using reduce() to Calculate the Sum of Even Numbers
 // Given an array of numbers, use reduce() to calculate the sum of only the even numbers in the array.
 
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -468,7 +501,7 @@
 //     return acc;   // 0 //2 //6 //12 // 20
 //    }
 // } , 0)
-// console.log(sumOfEven);
+// console.log(sumOfEven); // 20
 
 
 //! 4. Mapping to Squares and Filtering
@@ -478,11 +511,11 @@
 // let sqr = numbers.map((el)=>{
 //     return el*el
 // })
-// console.log(sqr);
+// console.log(sqr); // (5) [4, 9, 16, 25, 36]
 // let filtered = sqr.filter((el)=>{
 //     return el>20
 // })
-// console.log(filtered);
+// console.log(filtered); // (2) [25, 36]
 
 
 // ! 5. Chaining filter(), map(), and reduce() to Find Average of Even Numbers
@@ -501,35 +534,48 @@
 // let max = numbers.reduce((acc , el)=>{
 //     return acc>el ?acc:el
 // })
-// console.log(max);
+// console.log(max); // 23
 
 //! 8. Mapping and Filtering for Even Length Strings
 // You have an array of strings. Use map() to get the length of each string, and then use filter() to keep only those lengths that are even.
 
 // const words = ["hello", "world", "JavaScript", "is", "awesome"];
 // let evenLength = words.map((el)=>el.length).filter((el)=>el%2==0)
-// console.log(evenLength);
+// console.log(evenLength);  // (2) [10, 2]
 
 // ! remove duplicates of an array using filter
 
 // let arr = [1, 2, 3, 2, 4, 1, 5];
-// console.log(arr);
+// // console.log(arr);
 // let res = arr.filter((el , i , arr)=>{
 //     // if(arr.indexOf(el) === i){
 //     //     return el;
 //     // }
+//     console.log(arr.indexOf(el) , i);
+    
 //     return arr.indexOf(el) === i
 // })
-// console.log(res);
+// console.log(res); // (5) [1, 2, 3, 4, 5]
+
+/*
+0 0
+1 1
+2 2
+1 3  duplicate element found
+4 4
+0 5  duplicate element found
+6 6
+ */
 
 //! return Concatinated string of even length 
-let arr2 = ['a', 'ab', 'cdef', 'ghi', 'jkl'];
-let res = '';
-let evenArray = arr2.filter((el) => {
-    return el.length % 2 == 0;
-});
-
-console.log(evenArray.join(''));
+// let arr2 = ['a', 'ab', 'cdef', 'ghi', 'jkl'];
+// let res = '';
+// let evenArray = arr2.filter((el) => {
+//     return el.length % 2 == 0;
+// });
+// console.log(evenArray); // (2) ['ab', 'cdef']
+// console.log(evenArray.join(''));  // abcdef
+// console.log(evenArray.join()); // ab,cdef
 
 
 

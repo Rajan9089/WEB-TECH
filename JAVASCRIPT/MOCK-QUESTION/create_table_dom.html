@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <table border="">
+        <tr>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Place</th>
+        </tr>
+        <tr>
+            <td>Rohit Sharma</td>
+            <td>1234567890</td>
+            <td>Mumbai</td>
+        </tr>
+        <tr>
+            <td>Hikaru</td>
+            <td>1234567890</td>
+            <td>Mumbai</td>
+        </tr>
+    </table> -->
+    <script>
+        let body = document.body;
+        let table = document.createElement('table');
+        table.border = 1;
+        table.style.borderCollapse = "collapse";
+        table.style.textAlign = "center";
+        let row = 3;
+        let col = 3;
+
+        for(let i = 0; i < row; i++){
+            let tr = document.createElement('tr');
+            for(let j = 0; j < col; j++){
+                let td = document.createElement('td');
+                td.textContent = `row${i+1}col${j+1}`;
+                td.style.padding = '8px';
+                tr.appendChild(td);
+            }
+
+            table.appendChild(tr);
+        }
+        body.appendChild(table);
+    </script>
+</body>
+</html>
