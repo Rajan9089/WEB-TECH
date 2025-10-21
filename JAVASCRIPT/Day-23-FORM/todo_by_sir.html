@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            margin: 100px auto;
+            width: 70vw;
+            border: 2px solid black;
+            justify-content: center;
+        }
+        .todoForm, .todo {
+            width: 400px;
+            border: 2px solid black;
+            height: 400px;
+            border-radius: 50px;
+            background-color: bisque;
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            gap: 20px;
+            align-items: center;
+        }
+        .todoForm input{
+            height: 80px;
+            width: 100%;
+            border-radius: 20px;
+            padding: 0px 20px;
+            font-size: 24px;
+
+        }
+        .todoForm .btn{
+            width: 70%;
+            border-radius: 50px;
+        }
+        .todo{
+            background-color: violet;
+            list-style: none;
+            overflow-y: scroll;
+        }
+        .todo li{
+            width: 80%;
+            background-color: white;
+            padding: 20px;
+            font-size: 22px;
+            border-radius: 20px;
+        }
+        ::-webkit-scrollbar{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <form action="" class="todoForm">
+            <input type="text" class="username">
+            <input type="text" class="comment">
+            <input type="submit" class="btn">
+        </form>
+
+        <ul class="todo">
+
+        </ul>
+        <script>
+            let form = document.querySelector('form')
+            let username = document.querySelector('.username');
+            let comment = document.querySelector('.comment');
+            let todo = document.querySelector('.todo');
+            let ls = localStorage.createElement('')
+            form.addEventListener('submit', (e)=>{
+                e.preventDefault();
+                let li = document.createElement('li');
+                li.innerHTML = `<b>${username.value}</b> - ${comment.value}`
+                todo.appendChild(li);
+
+                username.value = '';
+                comment.value = '';
+            })
+        </script>
+    </section>
+</body>
+</html>

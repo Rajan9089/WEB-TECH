@@ -1,0 +1,68 @@
+let form = document.querySelector('.todoForm');
+let username = document.querySelector('.username')
+let comment = document.querySelector('.comment')
+let todo = document.querySelector('.todo')
+form.addEventListener('submit' , (e)=>{
+    e.preventDefault()
+    console.log(username.value);
+    console.log(comment.value);
+     let li = document.createElement('li');
+     li.innerHTML = `<b>${username.value}</b> - ${comment.value}`
+     console.log(li);
+     todo.appendChild(li)
+     username.value = ""
+     comment.value = ""
+})
+
+todo.addEventListener('click' ,(e)=>{
+    if(e.target.nodeName == 'LI'){
+        e.target.remove()
+    }
+    
+})
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            background-color: antiquewhite;
+            width: 70vw;
+            margin: auto;
+        }
+        button{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button>btn-1</button><button>btn-2</button><button>btn-3</button><button>btn-4</button><button>btn-5</button><button>btn-6</button><button>btn-7</button><button>btn-8</button><button>btn-9</button><button>btn-10</button><button>btn-11</button><button>btn-12</button><button>btn-13</button><button>btn-14</button><button>btn-15</button><button>btn-16</button><button>btn-17</button><button>btn-18</button><button>btn-19</button><button>btn-20</button><button>btn-21</button><button>btn-22</button><button>btn-23</button><button>btn-24</button><button>btn-25</button><button>btn-26</button><button>btn-27</button><button>btn-28</button><button>btn-29</button><button>btn-30</button><button>btn-31</button><button>btn-32</button><button>btn-33</button><button>btn-34</button><button>btn-35</button><button>btn-36</button><button>btn-37</button><button>btn-38</button><button>btn-39</button><button>btn-40</button><button>btn-41</button><button>btn-42</button><button>btn-43</button><button>btn-44</button><button>btn-45</button><button>btn-46</button><button>btn-47</button><button>btn-48</button><button>btn-49</button><button>btn-50</button><button>btn-51</button><button>btn-52</button><button>btn-53</button><button>btn-54</button><button>btn-55</button><button>btn-56</button><button>btn-57</button><button>btn-58</button><button>btn-59</button><button>btn-60</button><button>btn-61</button><button>btn-62</button><button>btn-63</button><button>btn-64</button><button>btn-65</button><button>btn-66</button><button>btn-67</button><button>btn-68</button><button>btn-69</button><button>btn-70</button><button>btn-71</button><button>btn-72</button><button>btn-73</button><button>btn-74</button><button>btn-75</button><button>btn-76</button><button>btn-77</button><button>btn-78</button><button>btn-79</button><button>btn-80</button><button>btn-81</button><button>btn-82</button><button>btn-83</button><button>btn-84</button><button>btn-85</button><button>btn-86</button><button>btn-87</button><button>btn-88</button><button>btn-89</button><button>btn-90</button><button>btn-91</button><button>btn-92</button><button>btn-93</button><button>btn-94</button><button>btn-95</button><button>btn-96</button><button>btn-97</button><button>btn-98</button><button>btn-99</button><button>btn-100</button>
+    </div>
+
+    <script>
+        // let btns = document.querySelectorAll('button')
+        // btns.forEach((btn)=>{
+        //     btn.addEventListener('click' , ()=>{
+        //        btn.style.backgroundColor = 'red'
+        //     }) 
+        // })
+
+        // ! event delegation
+        let container = document.querySelector('.container')
+        container.addEventListener('click' , (e)=>{
+            if(e.target.nodeName == 'BUTTON'){
+                e.target.remove()
+            }
+        })
+    </script>
+</body>
+</html>

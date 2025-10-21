@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //! 1) Using a simple for..of loop (very explicit)
+        const input = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+        const counts = {};
+        for (const el of input) {
+            if (counts[el]) {
+                counts[el] += 1;
+            }
+            else {
+                counts[el] = 1;
+            }
+        }
+        console.log(counts); // { apple: 3, banana: 2, orange: 1 }
+
+
+        //! 2) Using Array.prototype.reduce (concise, idiomatic)
+        // const input = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+        // const counts = input.reduce((acc, el) => {
+        //     // console.log(acc , el);
+        //     acc[el] = (acc[el] || 0) + 1;
+        //     // console.log(acc[el]);
+        //     return acc;
+        // }, {});
+        // console.log(counts);   // { apple: 3, banana: 2, orange: 1 }
+
+
+
+        //! 3) Using a Map (useful if keys may not be strings or you want ordered iteration)
+        // const input = ['apple', 'banana', 'apple', 'orange', 'banana', 'apple'];
+        // const map = new Map();
+        // // for (const item of input) {
+        // //     map.set(item, (map.get(item) || 0) + 1);
+        // // }
+
+        // // input.forEach((el)=>{
+        // //     map.set(el , (map.get(el) || 0) + 1);
+        // // })
+
+        // for(let i = 0; i < input.length; i++){
+        //     map.set(input[i] , (map.get(input[i]) || 0) + 1);
+        // }
+        // // convert to an object if you need plain object output
+        // const countsObj = Object.fromEntries(map);
+        // console.log(countsObj);  // { apple: 3, banana: 2, orange: 1 }
+
+
+    </script>
+</body>
+
+</html>

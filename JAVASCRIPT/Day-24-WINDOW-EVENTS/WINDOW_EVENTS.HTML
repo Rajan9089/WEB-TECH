@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .pages{
+            height: 100vh;
+            border: 2px solid black;
+        }
+        .page1{
+            background-color: bisque;
+        }
+        .page2{
+            background-color: rgb(195, 114, 15);
+        }
+        .page3{
+            background-color: rgb(255, 196, 212);
+        }
+        .page4{
+            background-color: rgb(196, 255, 253);
+        }
+        .mouse{
+            border-radius: 50%;
+            height: 30px;
+            width: 30px;
+            background-color: rgba(41, 205, 151);
+            box-shadow: 0px 0px 10px 20px rgba(41, 205, 151);
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="mouse"></div>
+    <div class="pages page1"></div>
+    <div class="pages page2"></div>
+    <div class="pages page3"></div>
+    <div class="pages page4"></div>
+
+    <script>
+        let mouse = document.querySelector('.mouse');
+        window.addEventListener('mousemove', (e)=>{
+            mouse.style.left = `${e.x-13}px`
+            mouse.style.top = `${e.y-10}px`
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+         body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+        .cards {
+            height: 300px;
+            width: 200px;
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let body = document.body;
+        
+
+        let card = document.createElement('div')
+        card.classList.add('cards')
+
+
+        let img = document.createElement('img');
+        img.src = 'https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=600';
+
+        img.height = '100'
+        img.width = '200'
+        let imageDiv = document.createElement('div');
+        imageDiv.appendChild(img)
+
+        let h1 = document.createElement('h1');
+        h1.innerText = 'Rajan Kumar'
+        let h2 = document.createElement('h2');
+        h2.innerText = 'ALL GOOD'
+    
+        card.appendChild(imageDiv)
+        card.appendChild(h1);
+        card.appendChild(h2);
+        body.appendChild(card)
+
+
+
+
+
+    </script>
+</body>
+
+</html>

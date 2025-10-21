@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Promise Chaining</h1>
+
+    <script>
+        // let p1 = new Promise((res , rej)=>{
+        //     res(50);
+        // });
+        // console.log('Before function execution');
+        // async function func() {
+        //     console.log('Inside function');
+        //     let res = await p1;
+        //     console.log('at the last of function');
+        // }
+        // func();
+        // console.log('After function execution');
+        // for(let i = 0; i < 10; i++){
+        //     console.log(i);
+        // }
+
+
+
+        let jsonObj = `{
+            "name":"abc",
+            "age":50,
+            "skills":[],
+            "hobbies":{},
+            "isMarried":true,
+            "kids":null
+        }`
+        console.log(jsonObj);
+
+        //! 1. JSON.parse(jsonObj)
+        // this method converts json obj into js object
+        let a = JSON.parse(jsonObj);
+        console.log(a);
+
+        //! 2. JSON.stringify(jsObj)
+        // it will convert js object to json object
+        let json2 = JSON.stringify(a);
+        console.log(json2);
+        
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>

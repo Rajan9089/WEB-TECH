@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const users = [
+            { id: 1, name: "Akshay", age: 23, city: "Delhi", isActive: true },
+            { id: 2, name: "Vinit", age: 28, city: "Mumbai", isActive: false },
+            { id: 3, name: "Rohit", age: 25, city: "Pune", isActive: true },
+            { id: 4, name: "Pranav", age: 19, city: "Delhi", isActive: false },
+            { id: 5, name: "Karan", age: 30, city: "Bangalore", isActive: true }
+        ];
+        // 1. Get an array of all the names from the users array.
+        // let res = users.map((el)=>{
+        //     return el.name;
+        // })
+        // console.log(res);
+        
+        // 2. Filter out users who are active (isActive: true).
+        let activeUsers = users.filter((el)=>{
+            // return el.isActive == true;
+            return el.isActive;
+        })
+        console.log(activeUsers);
+        
+        // 3. Find the first user who lives in “Delhi.”
+        let firstuserInDelhi = users.find((el)=>{
+            return el.city === 'Delhi';
+        })
+        console.log(firstuserInDelhi);
+        
+        // 4. Calculate the total age of all users using reduce().
+        let totalAge = users.reduce((acc, el)=>{
+            return acc + el.age;
+        },0)
+        console.log(totalAge);
+        
+        // 5. Sort the array by age in ascending order.
+        let sortByAge = users.sort((a,b)=>{
+            return a.age - b.age;
+        })
+        console.log(sortByAge);
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log('start');
+
+        // setTimeout(()=>{
+        //     console.log('helloooo');
+        // })
+        // console.log('end');
+        
+        // for(let i = 0; i < 1000000; i++){
+        //     console.log(i);
+        // }
+
+
+        // let p = new Promise((res,rej)=>{
+
+        // })
+        // console.log(p); // Promise {<pending>}
+
+        // let p = new Promise((res,rej)=>{
+        //     res('this is the data');
+        // })
+        // console.log(p); //Promise {<fulfilled>: 'this is the data'}
+
+        // let p = new Promise((res,rej)=>{
+        //     rej('this is an error');
+        // })
+        // console.log(p); //Promise {<rejected>: 'this is an error'}
+
+        
+        let p = new Promise((res , rej)=>{
+            let random = Math.round(Math.random()*10);
+            console.log(random);    
+            if(random > 5){
+                res('This is tha data');
+            }else{
+                rej('This is an error');
+            }
+        })
+        console.log(p);
+        p.then((data)=>{
+            console.log(data);
+        })
+        p.catch((e)=>{  
+            console.log(e);
+        })
+        p.finally(()=>{
+            console.log('finally');
+        })
+
+    </script>
+</body>
+</html>

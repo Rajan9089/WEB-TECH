@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+        }
+        form{
+            height: 300px;
+            width: 300px;
+            background-color: aqua;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 10px;
+            margin: 200px auto;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        Username: <input type="text" class="username">
+        Password: <input type="password" class="password">
+        Confirm Password: <input type="password" class="confirmpassword">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        let username = document.querySelector('.username');
+        let password = document.querySelector('.password');
+        let confirmpassword = document.querySelector('.confirmpassword');
+        let form = document.querySelector('form');
+
+       
+        form.addEventListener('submit', (e) => {
+
+            e.preventDefault();
+            
+            if (confirmpassword.value == password.value) {
+                alert('Login success')
+            } else {
+                alert('login fail');
+            }
+
+            username.value = ''
+            password.value = ''
+            confirmpassword.value = ''
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

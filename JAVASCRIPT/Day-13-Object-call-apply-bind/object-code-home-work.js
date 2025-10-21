@@ -1,5 +1,6 @@
 // ! https://codeshare.io/5ew8Y7
 // ! Programming on objects 
+
 const products = [
   { id: 1, name: "Laptop", category: "Electronics", price: 1200, rating: 4.5, stock: 30 },
   { id: 2, name: "Smartphone", category: "Electronics", price: 800, rating: 4.2, stock: 50 },
@@ -22,6 +23,7 @@ const products = [
   { id: 19, name: "Dining Table", category: "Furniture", price: 450, rating: 4.3, stock: 15 },
   { id: 20, name: "Chair", category: "Furniture", price: 100, rating: 4.0, stock: 200 }
 ];
+
 
 // ! display all the products with rating more than 4.2
 // let filteredRatings = products.filter((el)=>{
