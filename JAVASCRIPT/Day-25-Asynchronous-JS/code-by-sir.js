@@ -36,25 +36,26 @@
 
 
 // ! promise same as that of sent by the server 
-let p1 = new Promise((res , rej)=>{
-    let random = Math.round(Math.random()*10)
-    setTimeout(()=>{
-           if(random>5){
+let p1 = new Promise((res, rej) => {
+    let random = Math.round(Math.random() * 10)
+    setTimeout(() => {
+        if (random > 5) {
             res('This is the data')
-           }else{
+        } else {
             rej('This is the error')
-           }
-    },5000)
+        }
+    }, 5000)
 })
+
 console.log(p1);
-p1.then((data)=>{
-    console.log(data); 
+p1.then((data) => {
+    console.log(data);
 })
-p1.catch((err)=>{
-    console.log(err); 
+p1.catch((err) => {
+    console.log(err);
 })
-p1.finally(()=>{
+p1.finally(() => {
     console.log('Finally');
-    
+
 })
 console.log('End');

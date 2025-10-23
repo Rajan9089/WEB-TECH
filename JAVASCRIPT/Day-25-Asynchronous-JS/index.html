@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // console.log('start');
@@ -13,7 +15,7 @@
         //     console.log('helloooo');
         // })
         // console.log('end');
-        
+
         // for(let i = 0; i < 1000000; i++){
         //     console.log(i);
         // }
@@ -34,27 +36,29 @@
         // })
         // console.log(p); //Promise {<rejected>: 'this is an error'}
 
-        
-        let p = new Promise((res , rej)=>{
-            let random = Math.round(Math.random()*10);
-            console.log(random);    
-            if(random > 5){
+
+        let p = new Promise((res, rej) => {
+            let random = Math.round(Math.random() * 10);
+            console.log(random);     // 6  // 3
+            if (random > 5) {
                 res('This is tha data');
-            }else{
+            } else {
                 rej('This is an error');
             }
         })
-        console.log(p);
-        p.then((data)=>{
-            console.log(data);
+        console.log(p);  // Promise {<fulfilled>: 'This is tha data'} // Promise {<rejected>: 'This is an error'}
+        p.then((data) => {
+            console.log(data); // This is tha data
         })
-        p.catch((e)=>{  
-            console.log(e);
+        p.catch((e) => {
+            console.log(e);  // This is an error
         })
-        p.finally(()=>{
-            console.log('finally');
+        p.finally(() => {
+            console.log('finally');  // finally
         })
+        console.log('End');
 
     </script>
 </body>
+
 </html>

@@ -55,7 +55,7 @@
 // })
 // p1.finally(()=>{
 //     console.log('Finally');
-    
+
 // })
 // console.log('End');
 
@@ -76,17 +76,25 @@
 //     console.log(c);
 // })
 
+/* output
+
+50
+20
+10
+*/
+
 // ! async await
 // async and await are the keywords in js 
 // ! async
 // async keyword is used before the function declaration 
 // it is used to create an asynchronous function
 // async function will always return a promise 
-
+// if a asyns function returns non-promise data, it will wrap that into a promise then return it.
 // async function getData(){
 //     return 20;
 // }
-// console.log(getData());
+// console.log(getData()); // Promise { 20 }
+
 
 // ! await 
 // await keyword can be only used in async function , await is used to consume the promise
@@ -151,6 +159,11 @@
 // }).catch((err)=>{
 //     log(err)
 // })
+
+/*
+Promise {<pending>}
+(20) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+*/
 // ! step 1 -> fetch will return a promise 
 // ! step 2 -> if we consume that promise we will get response object 
 // ! step 3 -> response object contains a method called as json()
@@ -158,14 +171,16 @@
 // ! step 5 -> that promise we can handle by using promise chaining ,
 // we can return the res.json() (promise) from first then block and we can consume that in next than block 
 
+
 // ! fetching an api by using async await 
-// async function getData() { 
-//    try{
-//        let res = await fetch('https://fakestoreapi.com/products')
-//    let data = await res.json()
-//    console.log(data);
-//    }catch(err){
-//     console.log(err);
-//    }
+// async function getData() {
+//     try {
+//         let res = await fetch('https://fakestoreapi.com/products')
+//         let data = await res.json()
+//         console.log(data);
+//     } catch (err) {
+//         console.log(err);
+//     }
 // }
 // getData()
+

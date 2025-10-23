@@ -8,28 +8,28 @@
 </head>
 
 <body>
-    <!-- <form action="">
+    <form action="">
         UserName: <input type="text" class="username">
         <br>
         <button>Submit</button>
-    </form> -->
+    </form>
 
-    <!--! Not a proper way-->
+    <!--! Not a proper way-->   
     <!-- UserName: <input type="text">
     <button>Submit</butt on> -->
 
-    <h1>Hello , <span class="name">Guest</span></h1>
-    <input type="text" class="inp1">
+    <!-- <h1>Hello , <span class="name">Guest</span></h1>
+    <input type="text" class="inp1"> -->
 
     <script>
-        // let form = document.querySelector('form')
-        // let username = document.querySelector('.username')
-        // form.addEventListener('submit', (e) => {
-        //     e.preventDefault();
-        //     // console.log('Submitted');
-        //     console.log(username.value);
+        let form = document.querySelector('form')
+        let username = document.querySelector('.username')
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // console.log('Submitted');
+            console.log(username.value);
             
-        // })
+        })
 
 
         //! Not a proper way
@@ -39,16 +39,16 @@
         //     console.log('Submitted');
         // })
 
-        let inp1 = document.querySelector('.inp1');
-        let name = document.querySelector('.name');
+        // let inp1 = document.querySelector('.inp1');
+        // let name = document.querySelector('.name');
         // inp1.addEventListener('input', ()=>{
         //     console.log('TRIGGERED');
         //     name.textContent = inp1.value;
         // })
-        inp1.addEventListener('change', ()=>{
-            console.log('Triggered');
-            name.textContent = inp1.value;
-        })
+        // inp1.addEventListener('change', ()=>{
+        //     console.log('Triggered');
+        //     name.textContent = inp1.value;
+        // })
     </script>
 </body>
 
