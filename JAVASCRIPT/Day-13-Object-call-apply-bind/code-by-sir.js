@@ -32,15 +32,15 @@
 //  ! CRUD over objects 
 //  ! create 
 // let obj = {status:'offline'}
-// // ! update
+// ! update
 // obj.name = 'Hello'
 // obj.place = 'Kerala',
 // obj.hobby = 'Scrolling'
 // obj.status = 'online'
-// console.log(obj);
+// console.log(obj);  // {status: 'online', name: 'Hello', place: 'Kerala', hobby: 'Scrolling'}
 //  ! delete 
 // delete obj.status
-// console.log(obj);
+// console.log(obj);  // {name: 'Hello', place: 'Kerala', hobby: 'Scrolling'}
 
 
 // ! methods on Objects 
@@ -234,23 +234,23 @@
 
 // ! call ,apply , bind
 // these are the method used to change the reference of this keyword
-function fun(a){
-    console.log(this);
-    console.log(a);
-}
-// fun(100);
+// function fun(a){
+//     console.log(this);
+//     console.log(a);
+// }
+// // fun(100);
 
-let p1 = {
-    name:'Demo',
-    age:40
-}
-let p2 = {
-    name:'Dinga',
-    age:50
-}
+// let p1 = {
+//     name:'Demo',
+//     age:40
+// }
+// let p2 = {
+//     name:'Dinga',
+//     age:50
+// }
 
 // fun.call(p1);   
-fun.call(p2 , 20);
+// fun.call(p2 , 20);
 // fun.call(p2 , 70)
 // fun.apply(p2 , [90])
 // let res = fun.bind(p1)
